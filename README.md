@@ -39,11 +39,23 @@ Dataset files should be placed in the `data` directory.
 
 ## Project Structure
 
-project-root/ │ ├── data/ \# Dataset files (not included in repository)
-│ ├── src/ \# Source code │ ├── preprocess.py │ ├── train_model.py │ └──
-evaluate.py │ ├── tests/ \# Unit tests │ └── test_model.py │ ├──
-notebooks/ \# Jupyter notebooks for experimentation │ ├──
-requirements.txt \# Python dependencies │ └── README.md
+project-root/ 
+│ 
+├── data/ \# Dataset files (not included in repository)
+│ 
+├── src/ \# Source code 
+│ ├── preprocess.py 
+│ ├── train_model.py 
+│ └──evaluate.py 
+│ 
+├── tests/ \# Unit tests 
+│ └── test_model.py 
+│ 
+├──notebooks/ \# Jupyter notebooks for experimentation 
+│ 
+├──requirements.txt \# Python dependencies 
+│ 
+└── README.md
 
 ------------------------------------------------------------------------
 
@@ -102,7 +114,8 @@ components work correctly.
 
 ### Test Structure
 
-tests/ └── test_model.py
+tests/ 
+└── test_model.py
 
 The tests validate: - Data loading - Model pipeline - Prediction
 functionality
