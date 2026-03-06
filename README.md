@@ -94,20 +94,51 @@ This step performs: - Data cleaning - Feature encoding - Feature scaling
 
 ------------------------------------------------------------------------
 
-### 2. Train the Model
+### Run Training
 
-Train the machine learning model:
+To train the intrusion detection model:
 
-python src/train_model.py
+```bash
+python src/train.py --data_path data/kddcup.data_10_percent.gz
+```
 
-This script trains the model using the processed dataset and saves the
-trained model.
+The training pipeline will:
+
+- Load and preprocess the dataset
+- Encode categorical features
+- Scale features using **MinMaxScaler**
+- Split the data into training, validation, and test sets
+- Train multiple models
+- Select the best-performing model
+- Evaluate the model on the test set
+
+The trained model is saved as:
+
+```
+best_model.pkl
+```
 
 ------------------------------------------------------------------------
+## Models Used
 
+The training pipeline compares multiple machine learning models:
+
+- Random Forest
+- Logistic Regression
+- Support Vector Machine (SVM)
+
+The best model is selected based on **validation F1-score**.
+
+-----------------------------------------------------------------------
 ### 3. Evaluate the Model
 
-Evaluate model performance:
+Model performance is evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Classification Report
 
 python src/evaluate.py
 
