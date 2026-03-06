@@ -35,16 +35,37 @@ Attack categories include multiple types of network intrusions such as:
 
 Dataset files should be placed in the `data` directory.
 
-------------------------------------------------------------------------
-
+-------------------------------------------------------------------
 ## Project Structure
 
-project-root/ │ ├── data/ \# Dataset files (not included in repository)
-│ ├── src/ \# Source code │ ├── preprocess.py │ ├── train_model.py │ └──
-evaluate.py │ ├── tests/ \# Unit tests │ └── test_model.py │ ├──
-notebooks/ \# Jupyter notebooks for experimentation │ ├──
-requirements.txt \# Python dependencies │ └── README.md
+```
+project-root/
+│
+├── data/                     # Dataset files (not included in repository)
+│
+├── src/                      # Source code
+│   ├── preprocess.py         # Data preprocessing and feature preparation
+│   ├── train_model.py        # Model training script
+│   └── evaluate.py           # Model evaluation and metrics
+│
+├── tests/                    # Unit tests
+│   └── test_model.py         # Tests for ML pipeline
+│
+├── notebooks/                # Jupyter notebooks for experimentation
+│
+├── requirements.txt          # Python dependencies
+│
+└── README.md                 # Project documentation
+```
 
+### Folder Description
+
+- **data/** – Contains dataset files used for training and evaluation (not uploaded to GitHub due to size).
+- **src/** – Main source code for preprocessing, training, and evaluating the machine learning model.
+- **tests/** – Automated tests to verify that the ML pipeline works correctly.
+- **notebooks/** – Jupyter notebooks used for experiments and exploratory data analysis.
+- **requirements.txt** – Lists all Python libraries required to run the project.
+- **README.md** – Documentation explaining the project, setup, and usage.
 ------------------------------------------------------------------------
 
 ## Installation
@@ -102,7 +123,8 @@ components work correctly.
 
 ### Test Structure
 
-tests/ └── test_model.py
+tests/ 
+└── test_model.py
 
 The tests validate: - Data loading - Model pipeline - Prediction
 functionality
